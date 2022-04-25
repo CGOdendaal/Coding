@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(228, 19, 19);
+    color: white;
+    font-weight: 600;
+    }
+    */  
+    .assintitle {
+    margin-left: 40px;
+    }
+    
+    html, body {
+        height: 100%;
+        
+    }
+    body {
+        margin: 0;
+        padding-left: 50px;
+        padding-right: 50px;
+        
+    }
+    .flex-container {
+        height: 100%; 
+        width: 60%;
+        padding: 50px 50px;
+        border-radius: 5px;
+        border-style:solid;
+        margin: 10;
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .row {
+        width: auto;
+        border: 1px solid blue;
+    }
+    /*.flex-item {
+        background-color: tomato;
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+        line-height: 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+    }*/
+
+    

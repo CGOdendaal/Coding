@@ -1,0 +1,42 @@
+<div class="flex-container">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmitLoginDetails(loginForm)">
+
+
+<h3>Welcome!</h3>
+<br>
+<br>
+<h4>Login</h4>
+
+<p>Please provide your details below.</p>
+
+
+    <label>ID Number</label>
+    <input type="text" class="form-control" id="idnumber" formControlName="idnumberControl" 
+     [ngClass]="{
+                'is-valid': !loginForm.get('idnumberControl')?.hasError('required') && !loginForm.get('idnumberControl')?.hasError('invalidsaid'),
+                'is-invalid': isSubmitted && (loginForm.get('idnumberControl')?.hasError('required') || loginForm.get('idnumberControl')?.hasError('invalidsaid'))
+            }">
+    <div *ngIf="isSubmitted && loginForm.get('idnumberControl')?.hasError('required')" class="invalid-feedback">Please enter your ID Number</div>
+    <div *ngIf="isSubmitted &&
+         !loginForm.get('idnumberControl')?.hasError('required') &&
+         loginForm.get('idnumberControl')?.hasError('invalidsaid')" class="invalid-feedback">ID Number is invalid</div>
+<br>
+         <label>Password</label>
+         <input type="password" class="form-control" id="password" formControlName="passwordControl"
+          [ngClass]="{
+                 'is-valid': !loginForm.get('passwordControl')?.hasError('required'),
+                 'is-invalid': isSubmitted &&loginForm.get('passwordControl')?.hasError('required')
+                 }">
+         <div *ngIf="loginForm.get('passwordControl')?.hasError('required')" class="invalid-feedback">Please enter your password</div>
+
+<br>
+<br>
+
+<button type="submit" class="btn btn-primary">Login</button>
+
+<br>
+
+<button type="submit" class="btn btn-text" >Reset password</button>
+
+</form>
+</div>
